@@ -1,5 +1,4 @@
 import getExpenseAmountTotal from '../../selectors/expense-total'
-import moment from 'moment'
 import { expenses } from '../fixtures/expenses'
 
 test('should return total amount of expenses', () => {
