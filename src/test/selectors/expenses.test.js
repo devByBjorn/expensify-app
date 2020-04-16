@@ -1,4 +1,5 @@
 import selectExpenses from '../../selectors/expenses'
+import getExpenseAmountTotal from '../../selectors/expense-total'
 import moment from 'moment'
 import { expenses } from '../fixtures/expenses'
 
