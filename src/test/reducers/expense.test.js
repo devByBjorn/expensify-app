@@ -1,5 +1,5 @@
 import expensesReducer from '../../reducers/expenses'
-import { prevState } from '../fixtures/expenses'
+import { prevState, expenses } from '../fixtures/expenses'
 
 // DEFAULT STATE
 test('should set default state', () => {
@@ -88,6 +88,17 @@ test('should return list of expenses with no updated props', () => {
   }
 
   const result = expensesReducer(prevState, action)
-
   expect(result).toEqual(prevState)
+})
+
+test('should set expenses', () => {
+  const action = {
+    type: 'SET_EXPENSES',
+    expenses: {
+      ...expenses
+    }
+  }
+
+  const result = expensesReducer(prevState, action)
+  expect(result).toEqual(action.expenses)
 })
